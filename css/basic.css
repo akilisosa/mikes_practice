@@ -1,0 +1,64 @@
+h1 {
+    text-align: center;
+
+}
+
+h2 {
+    text-align: center;
+  
+}
+h3 {
+    text-align: center;
+
+}
+
+form {
+    text-align: center;
+
+}
+
+#searchterm {
+    
+
+   text-align: center;
+   width: 6em;
+   margin-right: 1em;
+   margin-top: 0.4em;
+
+}
+
+body {
+    text-align: center;
+}
+/*
+ #topRight{
+    position:relative;
+    left: 100px;
+    top: 150px;
+    z-index: 2;
+
+}
+
+#topLeft { 
+    background-color: blue;
+    position: relative;
+    left: -400px;
+    top: -600px;
+    z-index: 2;
+
+}
+#bottomRight { 
+    background-color: yellow;
+    position: relative;
+    left: 200px;
+    top: -200px;
+    z-index: 2;
+}
+#bottomLeft { 
+    background-color: red;
+    position: absolute;
+    left: 600px;
+    top: 0px;
+    z-index: 2;
+}
+*/

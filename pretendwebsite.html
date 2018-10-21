@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+
+<html lang="en-us">
+
+<head>
+    <!-- shout out to all these books that made this website possible!
+    
+    Using SVG with CSS3 & HTML 5 amelia bellamy-royds kut cagle & dudley storey you guys rock
+
+also just started on learning php, my sql javascript css and html third edition thats allot of stuff 
+
+webscrpaing with python by ryan mitchell ( o'reully). Copyright 2015 ryan mitchell, 978-1-491-91029-0!!!
+
+building progressive web apps with tal ater copyright 2017 tal ater , 978-149-196165-0
+
+building htnml5 games ... the one by apress... i should have written that one
+
+angular js up and running by shyam seshadri and brad green ( o rieldy). copyright 2014 shyan seshandri and brad green 978-1-491-90194-6 
+
+-->
+    <meta charset="UTF-8">
+    <title>Sosa Studios</title>
+    <link rel="stylesheet" type="text/css" href="css/basic.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://d3js.org/d3.v5.min.js"></script>
+    <script src="scripts/CoppeWeb.js"></script>
+    <script src="scripts/buildWeb.js"></script>
+    <script>
+                                     // Sets focus to the new window
+
+    
+    </script>
+<!--these are suppose to be glbal variables but they downt seem to work-->
+<style type="text/css">
+     root{ 
+    --position-X: 0px;
+    --position-Y: 0px;
+    --position-DX: 0px;
+    --position-DY: 0px;
+    --position-Z: 0px;
+}
+
+
+
+    </style>
+
+
+</head>
+
+<body>
+
+    <!--this is the header stuff that im going to make hide on click using jquery-->
+    <h1>Sosa Animation Studios</h1>
+    <h2>Presents:</h2>
+    <h3>A Quiet patient spider</h3>
+
+<form id="searchform" method="post"
+        onsubmit="">
+    <svg height="320px" width="600px" 
+     preserveAspectRatio="xMinYMax meet"
+     aria-label="spider" role="img" >
+   <title>svg image of a friendly spider</title>
+
+   <style type="text/css">
+  </style>
+     <defs>
+        <!-- this is where the same thpe of classes go, and ids with labes. its like you try and use css>
+        gooddam why did you get high... -->
+
+
+    
+        <circle id="eyes" cy="155" r="48"/>
+    <title>the spiders eyes</title>
+        <circle id="minieyes" r="6" stroke="black" fill="grey" strokewidth="1"/>
+    <title>the spiders smaller eyes</title>
+        </defs>
+    
+    
+         <g class="legs" stroke="green" stroke-width="6" fill="blue">
+    <!--rightside -->
+    <title>legs</title>
+        <path d="M 350,204
+                     c 60 -300, 50 -60,  20  5,
+                     q -10,40 -20,-5 z"/>
+    
+           <path d="M 380,74
+                     c 70 400, 60 100,  30  5,
+                     q -20,-40 -30,-5 z"/>
+    
+    <!-- leftside-->
+       <path d="M 250,204
+                     c -60 -300, -50 -60,  -20  5,
+                     q 10,40 20,-5 z"/>
+    
+           <path d="M 220,74
+                     c -70 400, -60 100,  -30  5,
+                     q 20,-40 30,-5 z"/>
+    
+            </g>
+      
+     
+         <polygon points="230,190 300,120 370,190" style="fill:lime;stroke:purple;stroke-width:8" />
+            <g stroke="black" stroke-width="2">
+            <use xlink:href="#eyes" x="250" fill="white"/>
+             <use xlink:href="#eyes" x="350" fill="white"/>
+            </g>
+    
+            <g>
+            <use xlink:href="#minieyes" x="250" y="190"/>
+              <use xlink:href="#minieyes" x="270" y="180"/>
+              <use xlink:href="#minieyes" x="265" y="200"/>
+              
+              
+               <use xlink:href="#minieyes" x="350" y="170" /> 
+              <use xlink:href="#minieyes" x="365" y="180"/>
+             <use xlink:href="#minieyes" x="380" y="160"/>
+              <use xlink:href="#minieyes" x="360" y="150"/>
+               <use xlink:href="#minieyes" x="355" y="165"/>
+                 <use xlink:href="#minieyes" x="340" y="175"/> 
+    
+            </g>
+    
+            <g stroke="blue" stroke-width="4" fill="black">
+            <path d="M 320,204
+                     a 25,10 0,0,1 80,0
+                     q -8,20 -80,0 z"/>
+    
+                 <path d="M 210,204
+                     a 25,10 0,0,1 80,0
+                     q-60,20 -80,0 z"/>
+    
+            </g>
+   
+   
+    </svg>
+<div id="searchform">
+    <label>
+        <input type="text" value='what are you looking for?' name="searchterm" />
+        
+    </label>
+    <button id="searchButton"  type="button" onclick="buildWeb()" >Send</button>
+
+  
+</form>
+</div>
+<div id="container">
+    
+    
+</div>
+</body>
+</html>
