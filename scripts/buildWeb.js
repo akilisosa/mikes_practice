@@ -4,8 +4,12 @@ function buildWeb(event)
 {
 
     //this is the function that builds the web. 
-    //we declared these variables so that we can use them in css
+    //to understand the structure you may want to start around line 110.
+    //basically the app, builds four courners a web, then you build out the web from there.
     
+
+    //these are the variables that are useed to manipulate a growing everexpanding web. 
+
     positionX = 250;
     positionDX = 250;
 
@@ -13,7 +17,10 @@ function buildWeb(event)
     positionDY = 250;
 
 
+//this is one of six functions, that continue to grow the web, after one the four corners are build
+    
     var createTOne = function() { 
+        //this one functions creates three boxes in the top left corner of the screen
 
         var svg = document.createElementNS("http://www.w3.org/2000/svg", "svg");
         svg.setAttribute('id',  'tOne' );
@@ -57,13 +64,21 @@ function buildWeb(event)
         svg.addEventListener("onclick", createTTwo);
         svg.addEventListener('click',createTTwo, false);
         document.body.appendChild(svg);
-        
-    
-        //then this needs to update and pass through a function. 
+       
+        //then this needs to update  the variables and pass them to the rest of the web. 
+       
+       var updatepositions = function(){
         positionX = positionX+250;
         positionY = positionY+250;
+
+    return updatepositions;
         }
-        
+         
+    }
+      
+
+    //these functions don't do anything because I haven't figured out how to pass the other variables to it. 
+    //I should have writen them out because i have the logic but eh.. maybe there is a more clever way.
         var createTTwo = function() {
         
             return undefined;
