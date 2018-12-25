@@ -120,11 +120,89 @@ angular js up and running by shyam seshadri and brad green ( o rieldy). copyrigh
     
             </g>
     
-            <g stroke="blue" stroke-width="4" fill="black">
-            <path d="M 320,204
+            <g id="rightPincer" stroke="blue" stroke-width="4" fill="black">
+                <!--this is the pincer-->
+                 <path d="M 320,204 
+                 a 25,10 0,0,1 80, 
+                 q -8,20 -80,0 z"/>
+
+
+                 
+
+                </g>
+
+<!--this goes after the path in rightPincer if the other thing doesn't work   <animateMotion
+                     path="m-5 0 c3 -6, -13 -2, 15 0, 
+                     c -2,-3, 4 6, -15, 0"
+                     dur="3s" fill="freeze" repeatCount="indefinite"/> -->
+<!--geeze this animation took me forever basically its in steps
+this whole thing is the path for the right pincer first you define the shape which i did stupidly with arcs
+then you start there and animate to the next spot, making an infinite loop by using the begin option
+0;animation4.end the dot end or your inital starting point.
+you have to imagine two circles like on a train moving the claw in and out up and down
+the back moves down and forward while the front moves up and forward-->
+
+                <g id="rightPincer" stroke="blue" stroke-width="4" fill="black">
+                    <path d="M 320,204
                      a 25,10 0,0,1 80,0
-                     q -8,20 -80,0 z"/>
-    
+                     q -8,20 -80,0 z">
+                    
+                     
+
+                     <animate id="animation1"
+                       attributeName="d"
+                       attributeType="XML"
+                       from="M 320,204
+                       a 25,10 0,0,1 80,0
+                       q -8,20 -80,0 z"
+                       to="M 310,220
+                       a 25,10 -5,0,1 66,-15
+                       q 7,15 -66,15 z" 
+                       begin="0;animation4.end" dur="3s"
+                       />
+
+                       <animate id="animation2"
+                       attributeName="d"
+                       attributeType="XML"
+                        begin="animation1.end"
+                        from="M 310,220
+                        a 25,10 -5,0,1 66,-15
+                       q 7,15 -66,15 z"
+                       to="M 290,215
+                       a 25,10 3,0,1 68,-09
+                       q 8,12 -68,9 z"
+                       dur="3s" />
+
+                       <animate id="animation3"
+                       attributeName="d"
+                       attributeType="XML"
+                        begin="animation2.end"
+                        from="M 290,215
+                        a 25,10 3,0,1 68,-09
+                        q 8,12 -68,9 z"
+                       to="M 311,200
+                       a 25,10 3,0,1 63,12
+                       q 8,12 -63,-12 z"
+                       dur="3s" />
+
+                       <animate id="animation4"
+                       attributeName="d"
+                       attributeType="XML"
+                        begin="animation3.end"
+                        from="M 311,200
+                        a 25,10 3,0,1 63,12
+                        q 8,12 -63,-12 z"
+                       to=" M 320,204
+                       a 25,10 0,0,1 80,0
+                       q -8,20 -80,0 z"
+                       dur="3s" />
+
+               
+                     
+                   </path>
+                   
+                </g>
+                <g id="leftPincer" stroke="blue" stroke-width="4" fill="black">
                  <path d="M 210,204
                      a 25,10 0,0,1 80,0
                      q-60,20 -80,0 z"/>

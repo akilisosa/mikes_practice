@@ -65,12 +65,19 @@
              <use xlink:href="#minieyes" x="340" y="175"/> 
 
         </g>
-
+<!--these are the front pincer things the one on top is the ? right one-->
         <g stroke="blue" stroke-width="4" fill="black">
-        <path d="M 320,204
-                 a 25,10 0,0,1 80,0
-                 q -8,20 -80,0 z"/>
+        <path d="M 320,204 a 25,10 0,0,1 80,0 q -8,20 -80,0 z"/>
 
+   
+ <path="M320,204 C 320,125 360,205, 400, 225 C 230,528 510,298 320 204">
+ <animateMotion
+ path="M 320,204 a 25,10 0,0,1 80,0 q -8,20 -80,0 z"
+ dur="6s" fill="freeze"/>
+    </path>
+
+
+<!-- this is the left one-->
              <path d="M 210,204
                  a 25,10 0,0,1 80,0
                  q-60,20 -80,0 z"/>

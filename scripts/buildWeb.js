@@ -67,12 +67,11 @@ function buildWeb(event)
        
         //then this needs to update  the variables and pass them to the rest of the web. 
        
-       var updatepositions = function(){
+       
         positionX = positionX+250;
         positionY = positionY+250;
 
-    return updatepositions;
-        }
+    
          
     }
       
